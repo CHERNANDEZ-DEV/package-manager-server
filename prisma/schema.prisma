@@ -1,0 +1,43 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mongodb"
+  url      = env("DATABASE_URL")
+}
+
+model Order {
+  id              String    @id @default(auto()) @map("_id") @db.ObjectId
+  pickupAddress   String
+  scheduledDate   DateTime
+  senderName      String
+  senderLastName  String
+  senderEmail     String
+  senderPhone     String
+  recipientAddress String
+  department      String
+  municipality    String
+  referencePoint  String
+  instructions    String?
+  packages        Package[] 
+  createdAt       DateTime @default(now())
+}
+
+model Package {
+  id         String  @id @default(auto()) @map("_id") @db.ObjectId
+  orderId    String  @db.ObjectId
+  weight     Float
+  content    String
+  length     Int
+  width      Int
+  height     Int
+  order      Order   @relation(fields: [orderId], references: [id], onDelete: Cascade)
+}
+
