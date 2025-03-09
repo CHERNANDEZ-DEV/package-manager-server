@@ -11,6 +11,9 @@
 ✅ **Base de datos MongoDB Atlas** con Prisma ORM.  
 ✅ **Validación de datos con DTOs y Class-Validator**.  
 
+
+## 📌 **Características extras**
+✅ **Endpoint para la obtención de las ordenes registradas** Retorna la información pertinente de todas las ordenes en un array.
 ---
 
 ## 🛠 **Tecnologías utilizadas**
