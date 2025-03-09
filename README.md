@@ -13,6 +13,12 @@
 
 ---
 
+## 📌 **Características extra**
+✅ **Endpoint para la obtención de las ordenes registradas** que retorna la información pertinente y sus bultos en un array.<br>
+✅ **Ruta protegida que requiere autenticación** (inicio de sesión).  
+
+---
+
 ## 🛠 **Tecnologías utilizadas**
 | Tecnología | Descripción |
 |------------|------------|
@@ -29,8 +35,8 @@
 ## 📦 **Instalación**
 ### **1️⃣ Clonar el repositorio**
 ```sh
-git clone https://github.com/tuusuario/backend-api.git
-cd backend-api
+git clone https://github.com/CHERNANDEZ-DEV/package-manager-server.git
+cd package-manager-server
 ```
 
 ### **2️⃣ Instalar dependencias**
@@ -42,8 +48,8 @@ npm install
 Crear un archivo .env en la raíz del proyecto y agregar:
 ```sh
 DATABASE_URL="mongodb+srv://usuario:password@cluster.mongodb.net/nestjsDB?retryWrites=true&w=majority"
-
-JWT_SECRET="the-secret-key"
+JWT_SECRET=""
+PORT=3001
 ```
 🔹 Reemplazar usuario y password con las credenciales de MongoDB Atlas.
 
