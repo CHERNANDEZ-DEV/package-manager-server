@@ -60,7 +60,7 @@ npx prisma db push
 ```sh
 npm run start:dev
 ```
-🔹 El servidor estará disponible en http://localhost:3000.
+🔹 El servidor estará disponible en http://localhost:3001.
 
 ---
 
